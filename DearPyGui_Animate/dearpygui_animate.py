@@ -576,22 +576,3 @@ def set_opacity():
 				
 
 	delta_opacities = items_updated
-	
-	
-
-
-	
-
-
-
-
-
-
-
-
-
-		
-		
-		
-		
-		
