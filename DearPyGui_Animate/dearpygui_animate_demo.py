@@ -11,7 +11,7 @@ import dearpygui_animate as animate
 
 
 #-----------------------------------------------------------------------------
-# 								Render Callback
+# 				Render Callback
 #-----------------------------------------------------------------------------
 
 def onUpdate(sender, data):
@@ -40,7 +40,7 @@ def update_running_animations():
 
 
 #-----------------------------------------------------------------------------
-# 								Main Menu Related
+# 				Main Menu Related
 #-----------------------------------------------------------------------------
 
 def show_buttons(sender, data):
@@ -66,7 +66,7 @@ def gotoDemo(sender, data):
 
 
 #-----------------------------------------------------------------------------
-# 								Position Demo Related
+# 				Position Demo Related
 #-----------------------------------------------------------------------------
 
 def demo_position(sender, data):
@@ -105,7 +105,7 @@ def remove_pos_demo(sender, data):
 
 
 #-----------------------------------------------------------------------------
-# 								Size Demo Related
+# 				Size Demo Related
 #-----------------------------------------------------------------------------
 
 def demo_size(sender, data):
@@ -169,7 +169,7 @@ def remove_size_demo(sender, data):
 
 
 #-----------------------------------------------------------------------------
-# 								Opacity Demo Related
+# 				Opacity Demo Related
 #-----------------------------------------------------------------------------
 
 def demo_opacity(sender, data):
@@ -230,7 +230,7 @@ def loop_close(sender, data):
 	
 
 #-----------------------------------------------------------------------------
-# 								Windows
+# 					Windows
 #-----------------------------------------------------------------------------	
 
 with window("Main"):
@@ -309,7 +309,7 @@ with window("Loop3", width = 180, height = 110, x_pos = 565, y_pos = 300, no_res
 
 
 
-# Start Animation
+# Startup Animation
 animate.add("position", "Demo", [622,800], [622, 304], [0,.06,.2,.99], 60)
 animate.add("opacity", "Demo", 0, 1, [.57,.06,.61,.86], 60)
 animate.add("size", "Demo", [36,32], [156,32], [0,.99,.47,1], 30, timeoffset=1.5, callback=show_buttons)
@@ -321,11 +321,3 @@ animate.add("position", "Demo", [562, 304], [562, 225], [0,.65,.59,.92], 30, tim
 add_value("running_animations", "0")
 set_render_callback(onUpdate)
 start_dearpygui(primary_window="Main")
-
-
-
-
-
-
-
-
