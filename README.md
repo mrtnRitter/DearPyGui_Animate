@@ -32,3 +32,34 @@ set_render_callback(animate.run)
 start_dearpygui(primary_window="Main")
 
 ``` 
+
+---
+
+**API:**
+
+```python
+def add(type, object, startval, endval, ease, duration, **options)
+```
+Add/initialize an animation
+
+Parameters:
+
+type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str: "position", "size", "opacity"</br>
+object</br>
+&nbsp;&nbsp;&nbsp;&nbsp;str: name of window/item which should receive the animation</br>
+startval</br>
+&nbsp;&nbsp;&nbsp;&nbsp;float (opacitiy only) or list [a,b]: starting value(s) for animation, item will be set to those when animation starts
+endval</br>
+&nbsp;&nbsp;&nbsp;&nbsp;float (opacitiy only) or list [a,b]: end value(s) for animation
+ease</br>
+&nbsp;&nbsp;&nbsp;&nbsp;float (opacitiy only) or list [a,b]: starting value(s) for item, item will be set to those when animation starts
+
+
+
+
+
+
+
+
+
