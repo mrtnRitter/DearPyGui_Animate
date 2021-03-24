@@ -45,24 +45,30 @@ Add/initialize an animation
 Parameters:
 
 type<br>
-&nbsp;&nbsp;&nbsp;&nbsp;str: "position", "size", "opacity"</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;str: "position", "size", "opacity"</br>*
 object</br>
-&nbsp;&nbsp;&nbsp;&nbsp;str: name of window/item which should receive the animation</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;str: name of window/item which should receive the animation</br>*
 startval</br>
-&nbsp;&nbsp;&nbsp;&nbsp;float (opacitiy only) or list [int,int]: starting value(s) for animation, item will be set to those when animation starts
+*&nbsp;&nbsp;&nbsp;&nbsp;float (opacitiy only) or list [int,int]: starting value(s) for animation, item will be set to those when animation starts</br>*
 endval</br>
-&nbsp;&nbsp;&nbsp;&nbsp;float (opacitiy only) or list [int,int]: end value(s) for animation
+*&nbsp;&nbsp;&nbsp;&nbsp;float (opacitiy only) or list [int,int]: end value(s) for animation</br>*
 ease</br>
-&nbsp;&nbsp;&nbsp;&nbsp;list[float,float,float,float], parameters for bezier, see https://cubic-bezier.com/
+*&nbsp;&nbsp;&nbsp;&nbsp;list[float,float,float,float], parameters for bezier, see https://cubic-bezier.com/</br>*
 duration</br>
-&nbsp;&nbsp;&nbsp;&nbsp;int, animation duration in frames, 60 = 1 second
+*&nbsp;&nbsp;&nbsp;&nbsp;int, animation duration in frames, 60 = 1 second</br>*
 options</br>
-&nbsp;&nbsp;&nbsp;&nbsp;int, animation duration in frames, 60 = 1 second
+*&nbsp;&nbsp;&nbsp;&nbsp;name:*
 
 
 
 
-
+"name" : "",
+		"timeoffset" : 0,
+		"loop": "",
+		"callback" : "",
+		"callback_data" : "",
+		"early_callback" : "",
+		"early_callback_data" : ""
 
 
 
