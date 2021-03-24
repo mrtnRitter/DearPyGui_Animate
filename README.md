@@ -1,3 +1,7 @@
+https://github.com/mrtnRitter/DearPyGui_Animate/blob/main/Animate.gif
+
+
+
 **DearPyGui_Animate** is an add-on written on top of [DearPyGUI](https://github.com/hoffstadt/DearPyGui) to make UI animations possible.
 
 **Features:**
