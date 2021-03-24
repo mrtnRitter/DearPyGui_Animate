@@ -22,7 +22,7 @@ with window("Main"):
 	set_main_window_title("dearpygui_animate    D E M O")
 	set_main_window_size(1280,720)
   
-with window("Demo", width=200, height=100, no_resize=True, no_move=True, no_close=True, no_collapse=True, no_scrollbar=True):
+with window("Demo", width=200, height=100):
 	add_text("Info", default_value="Hello World!", parent="Demo")
   
 animate.add("position", "Demo", [622,800], [622, 304], [0,.06,.2,.99], 60)
