@@ -8,7 +8,7 @@
 * add, delay, pause, continue, loop, remove animations
 * get various animation data for best flow control
 * animations are bezier driven to support every individual easing (see https://cubic-bezier.com/)
-* partial animations will add up to one global animtion
+* partial animations will add up to one global animation
 * support for callbacks when animation starts, as well as when animation ends
 * support for position (windows only), size and opacity
 
