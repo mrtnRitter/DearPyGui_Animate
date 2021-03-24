@@ -36,6 +36,7 @@ start_dearpygui(primary_window="Main")
 ---
 
 **Usage:**
+
 Please see the [Demo](https://github.com/mrtnRitter/DearPyGui_Animate/blob/main/DearPyGui_Animate/dearpygui_animate_demo.py) for some examples of how DearPyGui_Animate can be used.
 
 ---
