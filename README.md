@@ -45,7 +45,7 @@ Add/initialize an animation
 Parameters:
 
 type<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;str: "position", "size", "opacity"</br>*
+*&nbsp;&nbsp;&nbsp;&nbsp;str: type of animation: "position", "size", "opacity"</br>*
 object</br>
 *&nbsp;&nbsp;&nbsp;&nbsp;str: name of window/item which should receive the animation</br>*
 startval</br>
@@ -57,18 +57,20 @@ ease</br>
 duration</br>
 *&nbsp;&nbsp;&nbsp;&nbsp;int, animation duration in frames, 60 = 1 second</br>*
 options</br>
-*&nbsp;&nbsp;&nbsp;&nbsp;name:*
-
-
-
-
-"name" : "",
-		"timeoffset" : 0,
-		"loop": "",
-		"callback" : "",
-		"callback_data" : "",
-		"early_callback" : "",
-		"early_callback_data" : ""
+&nbsp;&nbsp;&nbsp;&nbsp;name</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str: name of animation</br>*
+&nbsp;&nbsp;&nbsp;&nbsp;timeoffset</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float: delay of animation</br>*
+&nbsp;&nbsp;&nbsp;&nbsp;loop</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str: type of loop: "ping-pong", "cycle", "continue"</br>*
+&nbsp;&nbsp;&nbsp;&nbsp;callback</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;callable, callback function executed after animation</br>*
+&nbsp;&nbsp;&nbsp;&nbsp;callback_data</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;any, data for callback function</br>*
+&nbsp;&nbsp;&nbsp;&nbsp;early_callback</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;callable, callback function executed before animation</br>*
+&nbsp;&nbsp;&nbsp;&nbsp;early_callback_data</br>
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;any, data for early callback function</br>*
 
 
 
