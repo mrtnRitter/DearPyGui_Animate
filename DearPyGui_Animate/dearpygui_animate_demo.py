@@ -243,12 +243,6 @@ with window("Main"):
 
 
 with window("Demo", width=36, height=32, no_resize=True, no_move=True, no_close=True, no_collapse=True, no_scrollbar=True):
-	pass
-	
-with window("Position Demo", width = 220, height = 100, no_resize=True, no_move=True, no_close=True, no_collapse=True, no_scrollbar=True):
-	add_text("pos_info", default_value="Animations can be stagged,\nindividual values will add up")
-	add_spacing(count=3, name="spacing")
-	add_text("position status", source="running_animations")
 	add_text("Info", default_value="This demo will show \nsome basic functions\nof DearPyGui_Animate", parent="Demo", color=[255,255,255,0])
 	add_spacing(count=5, parent="Demo")
 	add_button("Animate Position", parent="Demo", width=140, callback=gotoDemo, callback_data="position")
@@ -257,6 +251,11 @@ with window("Position Demo", width = 220, height = 100, no_resize=True, no_move=
 	hide_item("Animate Position")
 	hide_item("Animate Size")
 	hide_item("Animate Opacity")
+	
+with window("Position Demo", width = 220, height = 100, no_resize=True, no_move=True, no_close=True, no_collapse=True, no_scrollbar=True):
+	add_text("pos_info", default_value="Animations can be stagged,\nindividual values will add up")
+	add_spacing(count=3, name="spacing")
+	add_text("position status", source="running_animations")
 	hide_item("Position Demo")
 
 with window("Size Demo", width = 220, height = 120, x_pos = 530, y_pos = 260, no_resize=True, no_move=True, no_collapse=True, no_scrollbar=True, on_close=remove_size_demo):
