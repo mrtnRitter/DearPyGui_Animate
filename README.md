@@ -44,18 +44,19 @@ See [Wiki](https://github.com/mrtnRitter/DearPyGui_Animate/wiki)
 **Known limitations:**
 
 * only windows can be moved
-> no DearPyGUI methods to set position for other items
+&nbsp;&nbsp;&nbsp;> no DearPyGUI methods to set position for other items
 
 * actual minimum size for windows is 32x32
-> windows cannot be smaller than this, but dearpygui_animate will handle smaller values ([0,0] will be translated to [32,32] automatically)
+&nbsp;&nbsp;&nbsp;> windows cannot be smaller than this, but dearpygui_animate will handle smaller values ([0,0] will be translated to [32,32] automatically)
 
 * actual minimum size for items is 1x1 (tested for buttons only!)
-> items cannot be smaller than this, but dearpygui_animate will handle smaller values ([0,0] will be translated to [1,1] automatically)
+&nbsp;&nbsp;&nbsp;> items cannot be smaller than this, but dearpygui_animate will handle smaller values ([0,0] will be translated to [1,1] automatically)
 
 ---
 
 **Future:**
-(not promising)
+
+(no promise!)
 
 * add methods for other properties
 * add generators for sin, cos, rampup, down, random, wiggle, ...
