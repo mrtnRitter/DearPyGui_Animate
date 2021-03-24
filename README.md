@@ -1,4 +1,6 @@
-https://github.com/mrtnRitter/DearPyGui_Animate/blob/main/Animate.gif
+https://raw.githubusercontent.com/mrtnRitter/DearPyGui_Animate/main/Animate.gif
+
+
 
 
 
