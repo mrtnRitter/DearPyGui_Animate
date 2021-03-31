@@ -70,8 +70,14 @@ def gotoDemo(sender, data):
 #-----------------------------------------------------------------------------
 
 def demo_position(sender, data):
+	
+	# default values
+	delete_item("pos_info")
+	add_text("pos_info", default_value="Animations can be stagged,\nindividual values will add up", parent="Position Demo", before="spacing")
 	set_window_pos("Position Demo", 1500, -100)
+	animate.add("opacity", "Position Demo", 0, 1, [.51,.05,.5,.9], 1)
 	show_item("Position Demo")
+	
 
 	# animations overlapping in time adding up their values
 	animate.add("position", "Position Demo", [1280, -100], [200,-100], [.51,.05,.5,.9], 600)
@@ -308,7 +314,7 @@ with window("Loop3", width = 180, height = 110, x_pos = 565, y_pos = 300, no_res
 
 
 
-# Startup Animation
+# Start Animation
 animate.add("position", "Demo", [622,800], [622, 304], [0,.06,.2,.99], 60)
 animate.add("opacity", "Demo", 0, 1, [.57,.06,.61,.86], 60)
 animate.add("size", "Demo", [36,32], [156,32], [0,.99,.47,1], 30, timeoffset=1.5, callback=show_buttons)
