@@ -89,7 +89,7 @@ def demo_position(sender, data):
 	animate.add("position", "Position Demo", [500,300], [500,0], [.51,.05,.5,.9], 300, timeoffset=11, early_callback=update_demo_position_text)
 	animate.add("position", "Position Demo", [500,300], [500,600], [.51,.05,.5,.9], 300, timeoffset=11)
 	
-	animate.add("opacity", "Position Demo", 1, 0, [.51,.05,.5,.9], 20, timeoffset=18, callback=remove_pos_demo)
+	animate.add("opacity", "Position Demo", 1, 1, [.51,.05,.5,.9], 20, timeoffset=18, callback=remove_pos_demo)
 	
 	
 def update_demo_position_text(sender, data):
@@ -98,6 +98,8 @@ def update_demo_position_text(sender, data):
 
 
 def remove_pos_demo(sender, data):
+	delete_item("pos_info")
+	add_text("pos_info", default_value="Animations can be stagged,\nindividual values will add up", parent="Position Demo", before="spacing")
 	hide_item("Position Demo")
 	animate.add("position", "Demo", [20,20], [562,225], [.51,.05,.5,.9], 40)
 	animate.add("size", "Demo", [156,80], [156,170], [.51,.05,.5,.9], 40)
