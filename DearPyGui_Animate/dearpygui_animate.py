@@ -4,9 +4,10 @@ dearpygui animations add-on
 
 https://github.com/mrtnRitter/DearPyGui_Animate
 
-v0.1
+v0.11
 ----------------------------------------------
 """
+
 
 #-----------------------------------------------------------------------------
 # 				Imports
@@ -19,7 +20,7 @@ from dearpygui.simple import *
 
 
 #-----------------------------------------------------------------------------
-# 			     Global Registers
+# 				Global Registers
 #-----------------------------------------------------------------------------
 
 animations = []
@@ -30,7 +31,7 @@ delta_opacities = []
 
 
 #-----------------------------------------------------------------------------
-# 			     Main Functions
+# 				Main Functions
 #-----------------------------------------------------------------------------
 
 def add(type, object, startval, endval, ease, duration, **kwargs):
@@ -146,7 +147,7 @@ def run():
 			animation[16] = True
 			frame = animation[8] / animation[6]
 			ease = BezierTransistion(frame, animation[5])
-
+			
 			if animation[1] == "position":
 				add_delta_positions(animation, ease)
 			
@@ -459,11 +460,11 @@ def add_delta_opacities(animation, ease):
 	"""
 	
 	global delta_opacities
-					
+						
 	for item in delta_opacities:
 		if animation[2] == item[0]:
 			o_step = animation[4] * (ease - animation[9])
-
+			
 			item[1] += o_step
 			
 			if animation[8] < animation[6] or animation[10]:
@@ -474,7 +475,7 @@ def add_delta_opacities(animation, ease):
 				
 			if animation[8] == animation[6] and not item[2]:
 				item[2] = False
-		
+						
 			break
 	else:
 		delta_opacities.append([animation[2], animation[3], True])
@@ -550,7 +551,7 @@ def set_opacity():
 	"""
 	
 	global delta_opacities
-	
+		
 	items_updated = []
 
 	for item in delta_opacities:
@@ -561,19 +562,21 @@ def set_opacity():
 		elif item[2]:
 			item[2] = None
 			items_updated.append(item)
-		
-			if get_item_type(item[0]) == "mvAppItemType::Text":
-				new_color = get_item_configuration(item[0])["color"]
-				
-				# react to a bug in DearPyGui style system - review this when 0.7 is out
-				if new_color[0] > 255:
-					new_color = [255,255,255,255]
 					
-				new_color[3] = item[1]*255
-				configure_item(item[0], color = new_color)
-						
-			else:
-				set_item_style_var(item[0], mvGuiStyleVar_Alpha, [item[1]])
+		if get_item_type(item[0]) == "mvAppItemType::Text":
+			new_color = get_item_configuration(item[0])["color"]
+			
+			# react to a bug in DearPyGui style system - review this when 0.7 is out
+			if new_color[0] > 255:
+				new_color = [255,255,255,255]
+				
+			new_color[3] = item[1]*255
+			configure_item(item[0], color = new_color)
+					
+		else:
+			set_item_style_var(item[0], mvGuiStyleVar_Alpha, [item[1]])
+
+			
 				
 
 	delta_opacities = items_updated
