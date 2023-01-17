@@ -13,8 +13,8 @@ v0.11
 # 				Imports
 #-----------------------------------------------------------------------------
 
-from dearpygui.core import *
-from dearpygui.simple import *
+from dearpygui.core import *	# update this to latest DearPyGUI API
+from dearpygui.simple import *	# update this to latest DearPyGUI API
 
 
 
@@ -507,7 +507,7 @@ def set_pos():
 			x_int = round(item[1])
 			y_int = round(item[2])
 						
-		set_window_pos(item[0], x_int, y_int)
+		set_window_pos(item[0], x_int, y_int)	# update this to latest DearPyGUI API
 
 	delta_positions = items_updated
 		
@@ -539,8 +539,8 @@ def set_size():
 			w_int = round(item[1])
 			h_int = round(item[2])
 			
-		set_item_width(item[0], w_int)
-		set_item_height(item[0], h_int)
+		set_item_width(item[0], w_int)		# update this to latest DearPyGUI API
+		set_item_height(item[0], h_int)		# update this to latest DearPyGUI API
 
 	delta_sizes = items_updated
 
@@ -562,7 +562,8 @@ def set_opacity():
 		elif item[2]:
 			item[2] = None
 			items_updated.append(item)
-					
+		
+		# update this part to latest DearPyGUI API
 		if get_item_type(item[0]) == "mvAppItemType::Text":
 			new_color = get_item_configuration(item[0])["color"]
 			
