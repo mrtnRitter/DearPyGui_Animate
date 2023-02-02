@@ -1,6 +1,6 @@
 **DearPyGui_Animate** is an add-on written on top of [DearPyGUI](https://github.com/hoffstadt/DearPyGui) to make UI animations possible.
 
-Tested for DearPyGui 0.6x
+Tested for DearPyGui 1.x
 
 <img src="https://raw.githubusercontent.com/mrtnRitter/DearPyGui_Animate/main/Animate.gif">
 
@@ -20,22 +20,25 @@ Tested for DearPyGui 0.6x
 **Setup:**
 
 ```python
-from dearpygui.core import *
-from dearpygui.simple import *
+import dearpygui.dearpygui as dpg
+
 import dearpygui_animate as animate
 
-with window("Main"):
-	set_main_window_title("dearpygui_animate    D E M O")
-	set_main_window_size(1280,720)
-  
-with window("Demo", width=200, height=100):
-	add_text("Info", default_value="Hello World!", parent="Demo")
-  
-animate.add("position", "Demo", [622,800], [622, 304], [0,.06,.2,.99], 60)
-animate.add("opacity", "Demo", 0, 1, [.57,.06,.61,.86], 60)
+dpg.create_context()
+dpg.create_viewport(title="dearpygui_animate    D E M O", width=1280, height=720)
 
-set_render_callback(animate.run)
-start_dearpygui(primary_window="Main")
+with dpg.window(label="Demo", tag="Demo", width=200, height=100):
+    dpg.add_text("Hello World!")
+
+animate.add("position", "Demo", [622, 800], [622, 304], [0, .06, .2, .99], 60)
+animate.add("opacity", "Demo", 0, 1, [.57, .06, .61, .86], 60)
+
+dpg.setup_dearpygui()
+dpg.show_viewport()
+while dpg.is_dearpygui_running():
+    animate.run()
+    dpg.render_dearpygui_frame()
+dpg.destroy_context()
 
 ``` 
 
