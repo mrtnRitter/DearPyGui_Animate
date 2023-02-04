@@ -4,7 +4,7 @@ dearpygui animations add-on
 
 https://github.com/mrtnRitter/DearPyGui_Animate
 
-v0.11
+v0.12
 ----------------------------------------------
 """
 
