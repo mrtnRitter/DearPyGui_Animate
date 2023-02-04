@@ -71,7 +71,7 @@ def add(type, object, startval, endval, ease, duration, **kwargs):
     framecounter = 0
     last_ease = 0
     loopcounter = 0
-    isplaying = None
+    isplaying = False
     ispaused = False
     isreversed = False
 
@@ -129,7 +129,6 @@ def run():
     animations_updated = []
     callbacks = {}
     global animations
-    global generators
 
     for animation in animations:
 
