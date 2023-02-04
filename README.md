@@ -12,7 +12,7 @@ Updated and tested for DearPyGui 1.8.0 thanks to [IvanNazaruk](https://github.co
 * animations are bezier driven to support every individual easing (see https://cubic-bezier.com/)
 * partial animations will add up to one global animation
 * support for callbacks when animation starts, as well as when animation ends
-* support for position size and opacity
+* support for position, size and opacity
 
 ---
 
