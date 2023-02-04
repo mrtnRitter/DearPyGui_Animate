@@ -297,7 +297,7 @@ dpg.bind_theme(global_theme)
 
 with dpg.window(label="Demo", tag="Demo", width=36, height=32, min_size=[36, 32], no_resize=True, no_move=True, no_close=True, no_collapse=True, no_scrollbar=True):
     dpg.add_text("This demo will show \nsome basic functions\nof DearPyGui_Animate", tag="Info", parent="Demo", color=[255, 255, 255, 0])
-    dpg.add_spacing(count=5, parent="Demo")
+    dpg.add_spacer(height=5, parent="Demo")
     dpg.add_button(tag="Animate Position", label="Animate Position", parent="Demo", width=140, callback=lambda: gotoDemo("position"))
     dpg.add_button(tag="Animate Size", label="Animate Size", parent="Demo", width=140, callback=lambda: gotoDemo("size"))
     dpg.add_button(tag="Animate Opacity", label="Animate Opacity", parent="Demo", width=140, callback=lambda: gotoDemo("opacity"))
@@ -308,7 +308,7 @@ with dpg.window(label="Demo", tag="Demo", width=36, height=32, min_size=[36, 32]
 with dpg.window(label="Position Demo", tag="Position Demo", width=220, height=110, no_resize=True, no_move=True, no_close=True, no_collapse=True, no_scrollbar=True):
     dpg.add_text(tag="pos_info", default_value="Animations can be stagged,\nindividual values will add up")
     with dpg.group(tag="spacing"):
-        dpg.add_spacing(count=3)
+        dpg.add_spacer(height=3)
     dpg.add_text("", tag="running_animations")
     dpg.hide_item("Position Demo")
 
@@ -320,43 +320,43 @@ with dpg.window(label="Size Demo", tag="Size Demo", width=220, height=120, pos=[
     dpg.hide_item("Size Demo")
 
 with dpg.window(tag="Opacity Demo1", width=150, height=80, min_size=[150, 80], pos=[300, 100], no_resize=True, no_move=True, no_collapse=True, no_scrollbar=True, no_close=True, no_title_bar=True):
-    dpg.add_spacing(count=6)
+    dpg.add_spacer(height=6)
     dpg.add_text(tag="op_info_1", default_value="    Animations")
     dpg.hide_item("Opacity Demo1")
 
 with dpg.window(tag="Opacity Demo2", width=150, height=80, min_size=[150, 80], pos=[500, 100], no_resize=True, no_move=True, no_collapse=True, no_scrollbar=True, no_close=True, no_title_bar=True):
-    dpg.add_spacing(count=6)
+    dpg.add_spacer(height=6)
     dpg.add_text(tag="op_info_2", default_value="        can")
     dpg.hide_item("Opacity Demo2")
 
 with dpg.window(tag="Opacity Demo3", width=150, height=80, min_size=[150, 80], pos=[700, 100], no_resize=True, no_move=True, no_collapse=True, no_scrollbar=True, no_close=True, no_title_bar=True):
-    dpg.add_spacing(count=6)
+    dpg.add_spacer(height=6)
     dpg.add_text(tag="op_info_3", default_value="        be")
     dpg.hide_item("Opacity Demo3")
 
 with dpg.window(tag="Opacity Demo4", width=150, height=80, min_size=[150, 80], pos=[900, 100], no_resize=True, no_move=True, no_collapse=True, no_scrollbar=True, no_close=True, no_title_bar=True):
-    dpg.add_spacing(count=6)
+    dpg.add_spacer(height=6)
     dpg.add_text(tag="op_info_4", default_value="      looped")
     dpg.hide_item("Opacity Demo4")
 
 with dpg.window(tag="Loop1", width=180, height=120, pos=[565, 300], no_resize=True, no_move=True, no_collapse=True, no_scrollbar=True, no_close=True, no_title_bar=True):
     dpg.add_text(tag="loop_info_1", default_value="       ping-pong")
     dpg.add_text(tag="loop_des_1", default_value="Moves from start to end,\nmoves back to start,\nrepeat")
-    dpg.add_spacing(count=3)
+    dpg.add_spacer(height=3)
     dpg.add_button(tag="next_loop_1", width=164, label="next", callback=loop_cycle)
     dpg.hide_item("Loop1")
 
 with dpg.window(tag="Loop2", width=180, height=110, pos=[565, 300], no_resize=True, no_move=True, no_collapse=True, no_scrollbar=True, no_close=True, no_title_bar=True):
     dpg.add_text(tag="loop_info_2", default_value="         cycle")
     dpg.add_text(tag="loop_des_2", default_value="Moves from start to end,\nrepeat\n")
-    dpg.add_spacing(count=7)
+    dpg.add_spacer(height=7)
     dpg.add_button(tag="next_loop_2", width=164, label="next", callback=loop_continue)
     dpg.hide_item("Loop2")
 
 with dpg.window(tag="Loop3", width=180, height=120, pos=[565, 300], no_resize=True, no_move=True, no_collapse=True, no_scrollbar=True, no_close=True, no_title_bar=True):
     dpg.add_text(tag="loop_info_3", default_value="        continue")
     dpg.add_text(tag="loop_des_3", default_value="Moves from start to end\ntakes end as start\nrepeats movement")
-    dpg.add_spacing(count=3)
+    dpg.add_spacer(height=3)
     dpg.add_button(tag="next_loop_3", width=164, label="close", callback=loop_close)
     dpg.hide_item("Loop3")
 
